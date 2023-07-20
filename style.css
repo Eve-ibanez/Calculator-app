@@ -1,0 +1,306 @@
+:root {
+    /* Theme 1 Backgrounds*/
+
+    --Very-dark-desaturated-blue-bkg /*(main background)*/: hsl(222, 26%, 31%);
+    --Very-dark-desaturated-blue /*(toggle background, keypad background)*/: hsl(223, 31%, 20%);
+    --Very-very-dark-desaturated-blue /*(screen background)*/: hsl(224, 36%, 15%);
+
+    /* Keys*/
+
+    --Desaturated-dark-blue-1 /*(key background)*/: hsl(225, 21%, 49%);
+    --Desaturated-dark-blue /*(key shadow)*/: hsl(224, 28%, 35%);
+    --Red /*(key background, toggle)*/: hsl(6, 63%, 50%);
+    --Darkred /*(key shadow)*/: hsl(6, 70%, 34%);
+
+    --Light-grayis-horange /*(key background)*/: hsl(30, 25%, 89%);
+    --Grayis-horange /*(key shadow)*/: hsl(28, 16%, 65%);
+
+    /* Text */
+
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Theme 2 Backgrounds */
+
+    --Light-gray /*(main background)*/: hsl(0, 0%, 90%);
+    --Grayish-red /*(toggle background, keypad background)*/: hsl(0, 5%, 81%);
+    --Very-light-gray /*(screen background)*/: hsl(0, 0%, 93%);
+
+    /* Keys */
+
+    --Dark-moderate-cyan /*(key background)*/: hsl(185, 42%, 37%);
+    --Very-dark-cyan /*(key shadow)*/: hsl(185, 58%, 25%);
+    --Orange /*(key background, toggle)*/: hsl(25, 98%, 40%);
+    --Dark-orange /*(key shadow)*/: hsl(25, 99%, 27%);
+    --Light-grayish-yellow /*(key background)*/: hsl(45, 7%, 89%);
+    --Dark-grayish-orange /*(key shadow)*/: hsl(35, 11%, 61%);
+
+    /* Text */
+
+    --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+    --White /*(text)*/: hsl(0, 0%, 100%);
+
+    /* Theme 3  Backgrounds */
+
+    --Very-dark-violet /*(main background)*/: hsl(268, 75%, 9%);
+    --Very-dark-violet-1 /*(toggle background, keypad background, screen background)*/: hsl(268, 71%, 12%);
+
+    /* Keys */
+
+    --Dark-violet /*(key background)*/: hsl(281, 89%, 26%);
+    --Vivid-magenta /*(key shadow)*/: hsl(285, 91%, 52%);
+
+    --Pure-cyan /*(key background, toggle)*/: hsl(176, 100%, 44%);
+    --Soft-cyan /*(key shadow)*/: hsl(177, 92%, 70%);
+
+    --Very-dark-violet-3 /*(key background)*/: hsl(268, 47%, 21%);
+    --Dark-magenta /*(key shadow)*/: hsl(290, 70%, 36%);
+
+    /* Text */
+
+    --Light-yellow: hsl(52, 100%, 62%);
+    --Very-dark-blue: hsl(198, 20%, 13%);
+    --White /*(text)*/: hsl(0, 0%, 100%);
+    }
+
+body {
+    background-color: var(--Very-dark-desaturated-blue-bkg);
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    color: var(--White);
+    display: grid;
+    place-items: center;
+}
+.container {
+    width: 328px;
+    margin: 35px 20px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+.container__title {
+    font-size: 1em;
+    text-transform: lowercase;
+    text-align: start;
+}
+.container__num-theme {
+    font-size: .4em;
+    width: 65px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: -70px;
+    left: 270px;
+    font-weight: 700;
+}
+.container__theme {
+    width: 200px;
+    font-size: .4em;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: -50px;
+    left: 160px;
+    font-weight: 600;
+}
+.switch {
+    width: 70px;
+    height: 25px;
+    background-color: var(--Very-dark-desaturated-blue);
+    border-radius: 20px;
+    position: relative;
+    top: -10px;
+}
+.button-switch {
+    background-color: var(--Red);
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+.container__div-result__input {
+    width: 328px;
+    height: 90px;
+    border-radius: 10px;
+    background-color: var(--Very-very-dark-desaturated-blue);
+    border: none;
+    color: var(--White);
+    font-size: 1.2em;
+    font-weight: 800;
+    font-family: 'League Spartan';
+    text-align: end;
+}
+.container__div-calc {
+    height: 422px;
+    width: 330px;
+    background-color: var(--Very-dark-desaturated-blue);
+    margin-top: 25px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+.num, .del, .reset, .equal, .x {
+    width: 62px;
+    height: 62px;
+    border: none ;
+    border-radius: 10px;
+    margin: 3px;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 700;
+    font-family: 'League Spartan';
+    box-shadow: 0px 5px 0px 0px var(--Grayis-horange);
+    background-color: var(--Light-grayis-horange);
+    cursor: pointer;
+}
+.num:hover, .x:hover {
+    background-color: var(--White) ;
+}
+.del, .reset {
+    background-color: var(--Desaturated-dark-blue-1);
+    color: var(--White);
+    font-size: .6em;
+    box-shadow: 0px 5px 0px 0px var(--Desaturated-dark-blue);
+}
+.del:hover, .reset:hover {
+    background-color: hsl(225, 21%, 55%)
+}
+.reset {
+    width: 134px;
+}
+.equal {
+    width: 134px;
+    background-color: var(--Red);
+    color: var(--White);
+    box-shadow: 0px 5px 0px 0px var(--Darkred);
+    font-size: .6em;
+}
+.x {
+    text-transform: lowercase;
+}
+.equal:hover {
+    background-color: hsl(6, 63%, 60%);
+}
+.attribution { 
+    font-size: .9em; 
+}
+.attribution a { 
+    color: hsl(0, 99%, 50%); 
+}
+
+/*/////////////// mode 2 ////////////*/
+
+.bk-active-1 {
+    background-color: var(--Light-gray);
+    color: var(--Very-dark-grayish-yellow);
+}
+.bt-switch-active-1 {
+    background-color: var(--Orange);
+}
+.bk-switch-calc-active-1 {
+    background-color: var(--Grayish-red);
+}
+.bt-active-1 {
+    background-color: var(--Orange);
+    box-shadow: 0px 5px 0px 0px var(--Dark-orange);
+}
+.bt-active-1:hover {
+    background-color: hsl(25, 82%, 64%);
+}
+.bt-op-active-1 {
+    background-color: var(--Dark-moderate-cyan);
+    box-shadow: 0 5px 0 0 var(--Very-dark-cyan);
+}
+.bt-op-active-1:hover {
+    background-color: hsl(185, 47%, 66%) ;
+}
+.bk-result-active-1 {
+    background-color: var(--Very-light-gray);
+}
+
+/*/////////////// mode 3 ////////////*/
+
+.bk-active-2 {
+    background-color: var(--Very-dark-violet);
+    color: var(--Light-yellow);
+}
+.bt-switch-active-2 {
+    background-color: var(--Pure-cyan);
+}
+.bk-switch-calc-active-2 {
+    background-color: var(--Very-dark-violet-1);
+}
+.bt-active-2 {
+    background-color: var(--Pure-cyan);
+    box-shadow: 0px 5px 0px 0px var(--Soft-cyan);
+}
+.bt-active-2:hover {
+    background-color: hsl(177, 92%, 70%) ;
+}
+.bt-op-active-2 {
+    background-color: var(--Dark-violet);
+    box-shadow: 0 5px 0 0 var(--Vivid-magenta);
+}
+.bt-op-active-2:hover {
+    background-color: hsl(281, 59%, 49%) ;
+}
+.bk-result-active-2 {
+    background-color: var(--Very-dark-violet-1);
+    color: var(--Light-yellow);
+}
+
+.bk-active-2 .num:hover, .bk-active-2 .x:hover {
+    background-color: hsl(282, 46%, 37%);
+}
+.bk-active-2 .num, .bk-active-2 .x {
+    color: var(--Light-yellow);
+    background-color: var(--Very-dark-violet-3);
+    box-shadow: 0 5px 0 0 var(--Dark-magenta);
+}
+
+.bk-active-2 .equal {
+    color: var(--Very-dark-blue);
+}
+
+
+
+@media (min-width : 650px) {
+    .container {
+        position: relative;
+        width: 550px;
+        height: 730px;
+    }
+    .container__num-theme {
+        left: 450px;
+    }
+    .container__theme {
+        left: 340px;
+    }
+    .container__div-result__input {
+        font-size: 1.8em;
+        width: 535px;
+        margin-right: 5px;
+        height: 130px;
+    }
+    .container__div-calc {
+        width: 540px;
+    }
+    .container__div-calc {
+        height: 480px;
+    }
+    .num, .reset, .equal, .x, .del {
+        margin: 10px;
+        width: 100px;
+        height: 60px;
+    }
+    .reset, .equal {
+        width: 228px;
+    }
+}

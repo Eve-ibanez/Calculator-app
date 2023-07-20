@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;700&display=swap" rel="stylesheet">  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+<body>
+  <div class="container">
+    <h1 class="container__title"> calc </h1>
+    <div class="container__num-theme"> 
+      <span class="one">
+        1
+      </span>
+      <span class="two">
+        2
+      </span>
+      <span class="three">
+        3
+      </span>
+    </div>
+    <div class="container__theme"> 
+      <span> theme </span>  
+      <div class="switch">
+        <div class="button-switch"> </div>
+      </div>
+    </div>
+
+    <div class="container__div-result">
+      <form name="result">
+      <input class="container__div-result__input" type="text" name="result" readonly>
+      </form>
+    </div>
+    <div class="container__div-calc">
+      <button class="num" onclick="document.result.result.value+='7'"> 7 </button>
+      <button class="num" onclick="document.result.result.value+='8'"> 8 </button>
+      <button class="num" onclick="document.result.result.value+='9'"> 9 </button>
+      <button class="del" onclick="del()"> del </button>
+      <button class="num" onclick="document.result.result.value+='4'"> 4 </button>
+      <button class="num" onclick="document.result.result.value+='5'"> 5 </button>
+      <button class="num" onclick="document.result.result.value+='6'"> 6 </button>
+      <button class="num" onclick="document.result.result.value+='+'"> + </button>
+      <button class="num" onclick="document.result.result.value+='1'"> 1 </button>
+      <button class="num" onclick="document.result.result.value+='2'"> 2 </button>
+      <button class="num" onclick="document.result.result.value+='3'"> 3 </button>
+      <button class="num" onclick="document.result.result.value+='-'"> - </button>
+      <button class="num" onclick="document.result.result.value+='.'"> . </button>
+      <button class="num" onclick="document.result.result.value+='0'"> 0 </button>
+      <button class="num" onclick="document.result.result.value+='/'"> / </button>
+      <button class="x" onclick="document.result.result.value+='*'"> x </button>
+      <button class="reset" onclick="document.result.result.value=''"> reset </button>
+      <button class="equal" onclick="document.result.result.value=eval(document.result.result.value)"> = </button>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#"> Evelyn Ibañez </a>.
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
